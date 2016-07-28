@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FVTC.CarRental.UserInterface", "FVTC.CarRental.UserInterface\FVTC.CarRental.UserInterface.csproj", "{23729D1F-7974-4BA5-BC25-6124D44AD552}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FVTC.CarRental.BusinessLogic", "FVTC.CarRental.BusinessLogic\FVTC.CarRental.BusinessLogic.csproj", "{F5638E9C-F39E-44E2-A73C-1B903CDA147B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FVTC.CarRental.Data", "FVTC.CarRental.Data\FVTC.CarRental.Data.csproj", "{63AF24C4-3E74-44BC-BCA8-363D07E6D3F9}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://wolfeverson.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = FVTC.CarRental.UserInterface\\FVTC.CarRental.UserInterface.csproj
+		SccProjectName1 = FVTC.CarRental.UserInterface
+		SccLocalPath1 = FVTC.CarRental.UserInterface
+		SccProjectUniqueName2 = FVTC.CarRental.BusinessLogic\\FVTC.CarRental.BusinessLogic.csproj
+		SccProjectName2 = FVTC.CarRental.BusinessLogic
+		SccLocalPath2 = FVTC.CarRental.BusinessLogic
+		SccProjectUniqueName3 = FVTC.CarRental.Data\\FVTC.CarRental.Data.csproj
+		SccProjectName3 = FVTC.CarRental.Data
+		SccLocalPath3 = FVTC.CarRental.Data
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23729D1F-7974-4BA5-BC25-6124D44AD552}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{23729D1F-7974-4BA5-BC25-6124D44AD552}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{23729D1F-7974-4BA5-BC25-6124D44AD552}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{23729D1F-7974-4BA5-BC25-6124D44AD552}.Debug|x86.ActiveCfg = Debug|x86
+		{23729D1F-7974-4BA5-BC25-6124D44AD552}.Debug|x86.Build.0 = Debug|x86
+		{23729D1F-7974-4BA5-BC25-6124D44AD552}.Release|Any CPU.ActiveCfg = Release|x86
+		{23729D1F-7974-4BA5-BC25-6124D44AD552}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{23729D1F-7974-4BA5-BC25-6124D44AD552}.Release|Mixed Platforms.Build.0 = Release|x86
+		{23729D1F-7974-4BA5-BC25-6124D44AD552}.Release|x86.ActiveCfg = Release|x86
+		{23729D1F-7974-4BA5-BC25-6124D44AD552}.Release|x86.Build.0 = Release|x86
+		{F5638E9C-F39E-44E2-A73C-1B903CDA147B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5638E9C-F39E-44E2-A73C-1B903CDA147B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5638E9C-F39E-44E2-A73C-1B903CDA147B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F5638E9C-F39E-44E2-A73C-1B903CDA147B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F5638E9C-F39E-44E2-A73C-1B903CDA147B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F5638E9C-F39E-44E2-A73C-1B903CDA147B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5638E9C-F39E-44E2-A73C-1B903CDA147B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5638E9C-F39E-44E2-A73C-1B903CDA147B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F5638E9C-F39E-44E2-A73C-1B903CDA147B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F5638E9C-F39E-44E2-A73C-1B903CDA147B}.Release|x86.ActiveCfg = Release|Any CPU
+		{63AF24C4-3E74-44BC-BCA8-363D07E6D3F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63AF24C4-3E74-44BC-BCA8-363D07E6D3F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63AF24C4-3E74-44BC-BCA8-363D07E6D3F9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{63AF24C4-3E74-44BC-BCA8-363D07E6D3F9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{63AF24C4-3E74-44BC-BCA8-363D07E6D3F9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{63AF24C4-3E74-44BC-BCA8-363D07E6D3F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63AF24C4-3E74-44BC-BCA8-363D07E6D3F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63AF24C4-3E74-44BC-BCA8-363D07E6D3F9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{63AF24C4-3E74-44BC-BCA8-363D07E6D3F9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{63AF24C4-3E74-44BC-BCA8-363D07E6D3F9}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

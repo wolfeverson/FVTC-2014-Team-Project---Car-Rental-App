@@ -1,0 +1,41 @@
+﻿Tom -	DataBase Structure				3 hours		3/21/2013
+Jared -	Solution Planning/Initial		1 hours		3/21/2013
+Clifford - Classes/Collection			1 hr 40 min	3/25/2013
+Team(InClass) Database planning			1 hr		3/28/2013
+James - filling database				3hr 40min	3/28/2013
+Clifford - Classes/Collection			1 hr 20 min	3/30/2013
+Tom - Add Customers	to db				1 hr 30 min 4/1/2013
+Clifford - Classes/Collection			20 min		4/4/2013
+Tom - frmCustomer/ stored proc			1 hr		4/8/2013
+Jared - Forms							1 hr 40 min	4/15/2013
+Tom -frmCustomer search & fix load		30 min	    4/15/2013
+Tom -frmCustomer all working			30 min      4/17/2013 
+James - car form basic design			1 hr		4/17/2013  
+Tom - created RentalLog in Database		10 min		4/29/2013
+Clifford - frmLot, design & some code	1 hr 15 min 4/22/2013
+James - frmCar code						1hr 45min	4/23/2013
+James - fixed location IDs for cars		10min		4/23/2013
+James - frmVehicle code + database changes 1hr 10min4/25/2013
+Clifford - frmLot						1 hr 10 min	4/25/2013
+Jared - main form and wiring			3 hr		4/25/2013
+Tom - changed RentalLog in Database		15 min		4/29/2013
+Clifford - frmLot and frmMaint...		4 hr		4/29/2013
+Clifford - frmMaintenance				1 hr 20 min 5/1/2013
+Clifford - frmMaintenance, Classes		1 hr		5/2/2013
+Clifford - frmLot and frmMaint...		1 hr		5/2/2013
+Jared - TFS, frmMain					3 hr		5/6/2013
+Tom - logs transaction to database      2 hr		5/6/2013
+Tom - finds nearest printer/ prints		1 hr        5/8/2013
+James - frmVehicle delete added			30 min		5/8/2013
+Tom - Attempt to log to transactions    1 hr        5/8/2013
+Jared - Wiring/receipts/pricing			3 hours		5/9/2013
+Clifford - Classes/wiring				3 hours		5/9/2013
+James - fixing assorted problems		3hr			5/9/2013
+Jared - log4net workaround				1 hr 30 min 5/9/2013
+Jared - cleanups/style					1 hr		5/13/2013
+TOm - log4net							1 hr		5/16/2013
+
+
+
+Style is set I think(see Car/Cust forms for buttons....main form for group box)
+Needs testing.  

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBEverson" Class="CarRentalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=footesqlserver;Initial Catalog=DBEverson;User ID=CMLogin" SettingsObjectName="FVTC.CarRental.Data.Properties.Settings" SettingsPropertyName="DBEversonConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.RentalCustomers" Member="RentalCustomers">
+    <Type Name="RentalCustomer">
+      <Column Name="Customer_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(48) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="VarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="CompanyPhone" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="LicenseNumber" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="CreditCard" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DoNotRent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="RentalCustomer_RentalTransaction" Member="RentalTransactions" ThisKey="Customer_Id" OtherKey="Customer_ID" Type="RentalTransaction" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RentalVehicles" Member="RentalVehicles">
+    <Type Name="RentalVehicle">
+      <Column Name="Vehicle_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Make" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="VinNumber" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="Cost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RegistrationExpiration" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Location_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Mileage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastOilChange" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastBrakeJob" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastAirFilter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TireTreads" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastCoolingFlush" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InService" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InServiceMiles" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NeedAnalysis" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="RentalVehicle_RentalTransaction" Member="RentalTransactions" ThisKey="Vehicle_Id" OtherKey="Vehicle_ID" Type="RentalTransaction" />
+      <Association Name="RentalLot_RentalVehicle" Member="RentalLot" ThisKey="Location_Id" OtherKey="Location_Id" Type="RentalLot" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RentalLot" Member="RentalLots">
+    <Type Name="RentalLot">
+      <Column Name="Location_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Location_Row" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Location_Slot" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="RentalLot_RentalVehicle" Member="RentalVehicles" ThisKey="Location_Id" OtherKey="Location_Id" Type="RentalVehicle" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RentalTransactions" Member="RentalTransactions">
+    <Type Name="RentalTransaction">
+      <Column Name="TransactionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Customer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Vehicle_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TransactionDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="RentalCharge" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FuelCharge" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ExcessMilesCharge" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TotalCharge" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="MaintOilChange" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MaintAirFilter" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MaintBrakeJob" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MaintTireChange" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="RentalCustomer_RentalTransaction" Member="RentalCustomer" ThisKey="Customer_ID" OtherKey="Customer_Id" Type="RentalCustomer" IsForeignKey="true" />
+      <Association Name="RentalVehicle_RentalTransaction" Member="RentalVehicle" ThisKey="Vehicle_ID" OtherKey="Vehicle_Id" Type="RentalVehicle" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RentalLog" Member="RentalLogs">
+    <Type Name="RentalLog">
+      <Column Name="LogId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LogDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LogThread" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="LogLevel" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Logger" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LogMessage" Type="System.String" DbType="VarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_GetCustomerByLastName" Method="sp_GetCustomerByLastName">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="sp_GetCustomerByLastNameResult">
+      <Column Name="Customer_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(48) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="VarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="CompanyPhone" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="LicenseNumber" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="CreditCard" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DoNotRent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

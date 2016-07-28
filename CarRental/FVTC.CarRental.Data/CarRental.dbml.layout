@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.5" name="CarRental">
+  <DataContextMoniker Name="/CarRentalDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ca8a9ba0-4785-4771-b732-2f8ed46ac775" absoluteBounds="5.5, 5.75, 2, 3.5016097005208318">
+      <DataClassMoniker Name="/CarRentalDataContext/RentalCustomer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="01725740-2679-476f-b4b5-f6a15dcb6a65" absoluteBounds="5.5150000000000006, 6.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1b574a80-25e9-4131-a47f-275839d6821c" absoluteBounds="4.375, 1, 2, 4.2708154296875">
+      <DataClassMoniker Name="/CarRentalDataContext/RentalVehicle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c76c68c4-c55e-4e6b-917f-3fba6f2cdbb7" absoluteBounds="4.3900000000000006, 1.46, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e077e275-89e9-4bc8-9f13-365845ab0c7e" absoluteBounds="1.625, 2.875, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/CarRentalDataContext/RentalLot" />
+      <nestedChildShapes>
+        <elementListCompartment Id="674e059c-dd99-4772-9138-38ef9f43f128" absoluteBounds="1.6400000000000001, 3.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b83aebb-86f2-4941-9e80-74f549ef8a44" absoluteBounds="7.125, 1.375, 2, 3.5016097005208322">
+      <DataClassMoniker Name="/CarRentalDataContext/RentalTransaction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b24e61a7-3d12-4a41-a93b-afb6330c6752" absoluteBounds="7.14, 1.835, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.625 : 3.86464680989583); (4.375 : 3.86464680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CarRentalDataContext/RentalLot/RentalLot_RentalVehicle" />
+      <nodes>
+        <classShapeMoniker Id="e077e275-89e9-4bc8-9f13-365845ab0c7e" />
+        <classShapeMoniker Id="1b574a80-25e9-4131-a47f-275839d6821c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 7.50080485026042); (8.3125005 : 7.50080485026042); (8.3125005 : 4.87660970052083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CarRentalDataContext/RentalCustomer/RentalCustomer_RentalTransaction" />
+      <nodes>
+        <classShapeMoniker Id="ca8a9ba0-4785-4771-b732-2f8ed46ac775" />
+        <classShapeMoniker Id="3b83aebb-86f2-4941-9e80-74f549ef8a44" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.375 : 3.12580485026042); (7.125 : 3.12580485026042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CarRentalDataContext/RentalVehicle/RentalVehicle_RentalTransaction" />
+      <nodes>
+        <classShapeMoniker Id="1b574a80-25e9-4131-a47f-275839d6821c" />
+        <classShapeMoniker Id="3b83aebb-86f2-4941-9e80-74f549ef8a44" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b86fcb02-34a0-4ec2-b0ee-45795fbae693" absoluteBounds="1.875, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CarRentalDataContext/RentalLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ebbeb1c-a5ea-4c7d-8776-88b4e0564b87" absoluteBounds="1.8900000000000001, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
